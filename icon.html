@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+    <style>
+        @import url("");
+*{
+    font-family: 'poppins',sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+}
+:root{
+    --main-color:#fd4646;
+    --text-color:#02ac70;
+    --big-color:#fff;
+    --comtainer-color:#1e1e2a;
+}
+img{
+    width: 100%;
+}
+body{
+    color: var(--bg-color);
+    background: var(--container-color);
+}
+.container{
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--container-color);
+    box-shadow: 0 1px 2px hsla(0, 0, 98%, 0.1);
+    z-index: 100;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+.logo{
+    font-size: 1.1rem;
+    color: var(--bg-color);
+    font-weight: 600;
+}
+#cart-icon{
+    position: relative;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+#cart-icon[data-quantitiy]::after{
+    contain: '';
+
+}
+#cart-icon[data-quantitiy]::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -12px;
+    width: 20px;
+    height: 20px;
+    background: var(--text-color);
+    border-radius: 50%;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*cart*/
+.cart{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 360px;
+    min-height: 100vh;
+    padding: 20px;
+    background: var(--comtainer-color);
+    box-shadow: -2px 0 4px hsl(0, 4%, 15% / 10%);
+    transition: 0.3s cubic-bezier(0.075, 0.82,0.165,1);
+}
+.cart.active{
+    right: 0;
+    transition: 0.3s cubic-bezier(0.075, 0.82,0.165,1);
+}
+.total{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--text-color);
+}
+.total-title{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 1rem;
+
+
+}
+.total-price{
+    font-size: 1.075rem;
+    margin: 1rem 0 0 0.7rem;
+
+}
+.btn-buy{
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    width: 50%;
+    text-align: center;
+    border: none;
+    border-radius: 2rem;
+    background: var(--text-color);
+    color: var(--big-color);
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 500;
+    cursor: pointer;
+}
+#close-cart{
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+.cart-box{
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.cart-img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+
+    padding: 10px;
+}
+.detail-box{
+    display: grid;
+    row-gap: 0.5rem;
+}
+.cart-product-title{
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.cart-price{
+font-weight: 500;
+}
+.cart-quantity{
+    border: 1px solid var(--text-color);
+    outline-color: var(--main-color);
+    width: 2.8rem;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+.cart-remove{
+    font-size: 24px;
+    color: var(--main-color);
+    cursor: pointer;
+}
+    </style>
+    <header>
+        <!----nav---------->
+
+
+    <div class="nav container">
+        <!----logo-->
+        <a href="#" class="logo">Ecommerce</a>
+        <!---cart icon-->
+    
+        <i class="bx bx-shopping-bag " id="cart-icon" data-quantitiy="0" ></i>
+        <div class="cart">
+            <h2 class="cart-title">Your Cart</h2>
+            <!-- contend-->
+            <div class="cart-content">
+                <div class="cart-box">
+                    <img src="data:image/jpeg;base64,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" alt="" class="cart-img"/>
+                    <div class="detail-box">
+                        <div class="cart-product-title">product shirt</div>
+                        <div class="cart-price">$50</div>
+                        <input type="number" name="" id="" value="1" class="cart-quantity"/>
+                    </div>
+                     <!--- remove item-->
+                     <i class='bx bx-trash-alt'></i>
+                     <i class="bx bx-trash-alt cart-remove"></i>
+                 </div>
+             </div>
+             <div class="total">
+                 <div class="total-title">Total</div>
+                 <div class="total-price">$0</div>
+             </div>
+             <button type="button"class="btn-buy">Pay Now</button>
+             <!-- close cart-->
+              <i class="bx bx-x" id="close-cart"></i>
+             </div>
+         </div>
+<input type="image" class="text1" placeholder="select imag">
+<input type="file" class="text2" placeholder="select pdf file">
+<input type="radio" class="text3">
+<input type="date" class="text4">
+<input type="time" class="text5">
+        
+</header>
+    <script>
+        let cartIcon = document.querySelector("#cart-icon");
+        let cart = document.querySelector(".cart");
+        let closeCart = document.querySelector("#close-cart");
+        //open cart
+        cartIcon.onclick = () => {
+            cart.classList.add("active");
+        };
+        //close cart
+        closeCart.onclick = () => {
+            cart.classList.remove("active");
+        };
+
+    </script>
+</body>
+</html>

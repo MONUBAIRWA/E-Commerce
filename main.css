@@ -1,0 +1,264 @@
+body {
+  font-family: 'Poppins' 'Work Sans', sans-serif;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+.jtadtx {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 2em;
+}
+.hrILGp {
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: rgb(248, 238, 216);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.eXKBbI {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    float: left;
+    justify-content: space-around;
+    text-align: center;
+    width: 100%;
+}
+.jtadtx {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 2em;
+}
+.css-1gzxeik {
+    animation-duration: 1000ms;
+    animation-timing-function: ease;
+    animation-delay: 0ms;
+    animation-name: animation-os2n7p;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
+.LHdwB {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: rgb(248, 238, 216);
+}
+.jxMbAY {
+    display: flex;
+    background: url('shine-founders-background-blob.9bb9c014.svg') center bottom / contain no-repeat rgb(248, 238, 216);
+}
+.fQUoQn {
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0);
+    width: 100%;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 50px;
+}
+.bvfyKS {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 130%;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 12px;
+    color: rgb(68, 47, 58);
+}
+.byaCnD {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+.jTVYxW {
+    font-family: Poppins;
+    font-size: 20px;
+    color: rgb(68, 47, 58);
+    text-align: center;
+    max-width: 700px;
+}
+.eXKBbI {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    float: left;
+    justify-content: space-around;
+    text-align: center;
+    width: 100%;
+}
+.byaCnD {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+.htNvnt {
+    width: 100%;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 1009px;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    margin-top: 24px;
+    background-color: rgb(255, 255, 255);
+}
+.bdIIUx {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 0px;
+}
+.eXKBbI {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    float: left;
+    justify-content: space-around;
+    text-align: center;
+    width: 100%;
+}
+
+@font-face {
+  font-family: 'Work Sans Semi Bold';
+  src: url('/src/assets/fonts/WorkSans-SemiBold.ttf');
+}
+@font-face {
+  font-family: 'Work Sans Bold';
+  src: url('/src/assets/fonts/WorkSans-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('/src/assets/fonts/WorkSans-Regular.ttf');
+}
+
+.StripeElement {
+  display: block;
+  width: 280px;
+  font-family: 'Work Sans';
+  font-size: 14px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  box-shadow: rgba(50, 50, 93, 0.14902) 0px 1px 3px,
+    rgba(0, 0, 0, 0.0196078) 0px 1px 0px;
+  border-radius: 4px;
+  background: #f0f0f0;
+}
+@media (min-width: 770px) {
+  .StripeElement {
+    width: 540px;
+  }
+}
+
+.PaymentRequestButton {
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+/* Compassion Quiz */
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out 0.3s;
+}
+
+.fade-leave {
+  position: absolute;
+  top: 0;
+  margin-top: 100px;
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .fade-leave {
+    margin-top: 165px;
+  }
+}
+/* need to handle desktop */
+
+.fade-leave.fade-leave-active {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-appear {
+  opacity: 0;
+}
+
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Loading animation */
+.loading-animation {
+  position: relative;
+  background: #ffc942;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  border: 10px solid #ffdf8f;
+}
+
+.loading-animation:after {
+  content: '';
+  background: trasparent;
+  width: 140%;
+  height: 140%;
+  position: absolute;
+  border-radius: 100%;
+  top: -20%;
+  left: -20%;
+  opacity: 0.7;
+  box-shadow: rgba(245, 175, 0, 0.6) -4px -5px 3px -3px;
+  -webkit-animation: rotate 2s infinite linear;
+          animation: rotate 2s infinite linear;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
